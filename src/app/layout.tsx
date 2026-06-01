@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { headers } from "next/headers";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -33,6 +34,7 @@ export default async function RootLayout({
     <html lang={lang} className={`${inter.variable} h-full`}>
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
