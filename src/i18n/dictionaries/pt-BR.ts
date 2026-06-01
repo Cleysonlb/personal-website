@@ -209,6 +209,6 @@ export const ptBR: Dictionary = {
   links: {
     linkedin: "https://www.linkedin.com/in/cleyson-dev/",
     github: "https://github.com/Cleysonlb",
-    resume: "/Cleyson-Leal-Resume.pdf",
+    resume: "/curriculo.pdf",
   },
 };

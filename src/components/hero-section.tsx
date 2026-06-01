@@ -40,7 +40,7 @@ export function HeroSection({ dictionary }: { dictionary: Dictionary }) {
           <div className="mt-8 flex flex-wrap items-center gap-4 text-sm">
             <a
               href={links.resume}
-              download
+              download="curriculo.pdf"
               className="text-muted transition-colors hover:text-foreground"
             >
               {hero.downloadResume}
