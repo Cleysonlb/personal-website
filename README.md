@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cleyson Leal — Personal Website
 
-## Getting Started
+A minimal about page inspired by [zenorocha.com/about](https://zenorocha.com/about), populated from [LinkedIn profile](https://www.linkedin.com/in/cleyson-dev/).
 
-First, run the development server:
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) — redirects to `/pt-BR` or `/en` based on your browser language and saved preference.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Internationalization (i18n)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Locales:** `en`, `pt-BR` (default: `pt-BR`)
+- **URLs:** `/en`, `/pt-BR`
+- **Toggle:** EN | PT in the top navigation
+- **Dictionaries:** `src/i18n/dictionaries/en.ts`, `src/i18n/dictionaries/pt-BR.ts`
 
-## Learn More
+## Resume (PDF)
 
-To learn more about Next.js, take a look at the following resources:
+Generate an ATS-friendly tech resume from LinkedIn content:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run resume:pdf
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Output: `public/Cleyson-Leal-Resume.pdf`
 
-## Deploy on Vercel
+Edit `src/resume/resume-data.ts` to update bullets, skills, and experience.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customize
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Edit `src/i18n/dictionaries/` to update copy, career history, and links. Replace the `CL` avatar in `src/components/hero-section.tsx` with a real headshot when you have one.
+
+## Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
